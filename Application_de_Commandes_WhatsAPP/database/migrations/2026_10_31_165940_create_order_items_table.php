@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('order_items', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('order_id');
+            $table->foreignId('product_id');
+            $table->string('nom_produit');
+            $table->unsignedInteger('prix_unitaire');
+            $table->unsignedInteger('quantité');
             $table->timestamps();
         });
     }

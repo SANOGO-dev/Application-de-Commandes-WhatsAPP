@@ -10,7 +10,7 @@ class Order extends Model
 {
     protected $fillable = [
         'shop_id', 'reference', 'client_nom', 'client_tel',
-        'adresse', 'note', 'total', 'statut',
+        'adresse','note','total', 'statut',
     ];
  
     public function shop(): BelongsTo

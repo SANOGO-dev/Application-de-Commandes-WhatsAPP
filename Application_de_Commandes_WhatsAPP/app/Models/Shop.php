@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Shop extends Model
 {
     protected $fillable = [
-        'user_id', 'nom', 'slug', 'logo', 'whatsapp',
+        'user_id', 'nom', 'slug', 'whatsapp',
         'description', 'couleur', 'statut_abonnement', 'expire_le',
     ];
  

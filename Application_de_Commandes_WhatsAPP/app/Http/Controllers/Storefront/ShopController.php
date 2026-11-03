@@ -19,7 +19,7 @@ class ShopController extends Controller
             ->latest()
             ->get();
  
-        return view('storefront.show', [
+        return view('storefront.show' , [
             'shop' => $shop,
             'categories' => $shop->categories,
             'products' => $products,

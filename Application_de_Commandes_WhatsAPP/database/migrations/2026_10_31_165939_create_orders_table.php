@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('shop_id')->constrained()->cascadeOnDelete();
+            $table->string('client_nom', 100);
+            $table->string('client_tel', 20);
+            $table->string('adresse')->nullable();
+            $table->string('reference')->unique();
+             $table->text('note')->nullable();
+            $table->string('statut')->default('nouvelle');
+            $table->unsignedInteger('total');
             $table->timestamps();
         });
     }

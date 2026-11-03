@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('shops', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+                  $table->string('slug')->unique();
+                  $table->string('nom');
+                  $table->string('whatsapp');
+                  $table->string('couleur')->default('#16a34a');
+                  $table->text('description')->nullable();
+                  $table->string('statut_abonnement')->default('essai');
+                  $table->dateTime('expire_le')->nullable();
+                       
             $table->timestamps();
         });
     }
