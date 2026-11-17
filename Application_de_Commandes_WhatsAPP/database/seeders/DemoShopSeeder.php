@@ -18,7 +18,7 @@ class DemoShopSeeder extends Seeder
         );
 
         $shop = Shop::firstOrCreate(
-            ['slug' => 'boutique-demo'],
+            ['slug' => 'boutique-Démo'],
             [
                 'user_id' => $user->id,
                 'nom' => 'Boutique Démo',
@@ -26,8 +26,8 @@ class DemoShopSeeder extends Seeder
                 'whatsapp' => '2250700000000',
                 'description' => 'Boutique de test pour vérifier le catalogue, le panier et la commande WhatsApp.',
                 'couleur' => '#16a34a',
-                'statut_abonnement' => 'essai',
-                'expire_le' => now()->addDays(7),
+                'statut_abonnement' => 'actif',
+                'expire_le' => now()->addYear('2027-31-01'),
             ]
         );
 

@@ -34,7 +34,7 @@ class CheckoutController extends Controller
     {
         $data = $request->validate([
             'client_nom' => 'required|string|max:100',
-            'client_telephone' => 'required|string|max:20',
+            'client_tel' => 'required|string|max:20',
             'adresse' => 'nullable|string|max:255',
             'note' => 'nullable|string|max:500',
         ]);

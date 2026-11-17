@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('product_id');
             $table->string('nom_produit');
             $table->unsignedInteger('prix_unitaire');
-            $table->unsignedInteger('quantité');
+            $table->unsignedInteger('quantite');
             $table->timestamps();
         });
     }
