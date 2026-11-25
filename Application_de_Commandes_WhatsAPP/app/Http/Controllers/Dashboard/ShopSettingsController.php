@@ -22,7 +22,7 @@ class ShopSettingsController extends Controller
             return redirect()->route('dashboard');
         }
 
-        return view('dashboard.shop-create');
+        return view('dashboard.shop.create');
     }
 
     public function store(Request $request)
